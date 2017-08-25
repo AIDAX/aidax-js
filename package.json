@@ -1,0 +1,21 @@
+{
+  "name": "aidax_client",
+  "version": "2.7.3",
+  "description": "",
+  "main": "ax.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AIDAX/aidax-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rollup-plugin-filesize": "^1.4.2",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}
