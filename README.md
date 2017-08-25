@@ -1,4 +1,5 @@
 # Installation
 
-* Run npm install -g rollup
-* Then npm run build
+* npm install -g rollup
+* npm install
+* npm run build
