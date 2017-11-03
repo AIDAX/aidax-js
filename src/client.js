@@ -282,7 +282,7 @@ var uid = aidax_visitor_id,
           "] \n" +
           JSON.stringify(properties)
       );
-      if (navigator.sendBeacon && ready) {
+      if (ready) {
         execute_batch();
       }
     }
