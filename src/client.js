@@ -212,6 +212,10 @@ var AIDAX_COLLECTOR = "//api.aidax.com.br",
     var uuid_regex = /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
     return uuid_regex.test(id);
   },
+  validate_eventid = function(event_id){
+    var eid_regex = /^[0-9A-F]{8}-[0-9A-F]{4}-5[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
+    return eid_regex.test(event_id);
+  },
   href = getHref(),
   referer = getReferrer(),
   device = UAParser(),
@@ -407,7 +411,7 @@ var uid = aidax_visitor_id,
       );
       var cond2 = assert(
         typeof obj.id === "undefined" ||
-          (typeof obj.id === "string" && validate_uuid(obj.id)),
+          (typeof obj.id === "string" && validate_eventid(obj.id)),
         "[AIDAX] Invalid event ID."
       );
       if(cond1 && cond2) {
